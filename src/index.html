@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Tallinn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="hero">
+        <div class="hero-container">
+            <video autoplay muted playsinline id="hero-video">
+                <source src="/assets/videos/vid2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="hero-text">
+                <h1>Visit Tallinn</h1>
+                <p>Discover and explore the beauty and history of Tallinn.</p>
+                <a href="#introduction" class="btn">Explore Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <section id="introduction">
+            <h2>Welcome to Tallinn</h2>
+            <div class="text-and-image">
+                <p>Tallinn, the capital of Estonia, is a city that beautifully blends medieval history with modern
+                    innovation. From its cobblestone streets to its vibrant tech scene, Tallinn offers a unique
+                    experience
+                    for every visitor.</p>
+                <img src="/gallery/images/img1.png" alt="Tallinn Cityscape">
+            </div>
+            <hr>
+            <div class="text-and-image">
+                <img src="/gallery/images/img2.png" alt="Tallinn Cityscape">
+                <p>Step into the heart of medieval Europe at Tallinn's Old Town. Wander through winding cobblestone
+                    streets, marvel at Gothic spires piercing the sky, and discover hidden courtyards where
+                    merchants once traded. The Old Town's defensive walls and towers still stand guard, offering
+                    breathtaking views of the Baltic Sea and modern Tallinn beyond.</p>
+            </div>
+        </section>
+        <hr>
+        <section class="current-status">
+            <h2 style="margin-top: 0px;">In Tallinn right now</h2>
+            <div class="status-cards">
+                <div class="status-card">
+                    <h3>Weather</h3>
+                    <img src="assets/sun.png" id="weather-icon" alt="Weather Icon">
+                    <h4 id="weather-temp">--°C</h4>
+                    <p id="weather-description">Loading...</p>
+                    <h6>api.open-meteo.com</h6>
+                </div>
+                <div class="status-card">
+                    <h3>Time</h3>
+                    <img src="assets/clock.png" alt="Clock Icon">
+                    <h4 id="current-time">--:--</h4>
+                    <p id="time-zone">--</p>
+                </div>
+                <div class="status-card">
+                    <h3>Population</h3>
+                    <img src="assets/population.png" alt="Population Icon">
+                    <h4 id="population-count">~461,000</h4>
+                    <p>Source: Wikipedia</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="trip-planner">
+            <h2>Plan Your Trip</h2>
+            <div class="planner-container">
+                <div class="planner-form">
+                    <div class="form-group">
+                        <label for="trip-duration">Trip Duration:</label>
+                        <select id="trip-duration">
+                            <option value="1">1 Day</option>
+                            <option value="2">2 Days</option>
+                            <option value="3">3 Days</option>
+                            <option value="7">1 Week</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="trip-interests">Main Interests:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" value="history" class="interest-checkbox"> History &
+                                Culture</label>
+                            <label><input type="checkbox" value="food" class="interest-checkbox"> Food & Dining</label>
+                            <label><input type="checkbox" value="nature" class="interest-checkbox"> Nature &
+                                Parks</label>
+                            <label><input type="checkbox" value="nightlife" class="interest-checkbox"> Nightlife</label>
+                            <label><input type="checkbox" value="shopping" class="interest-checkbox"> Shopping</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget-range">Budget Range (per day):</label>
+                        <input type="range" id="budget-range" min="20" max="200" value="80">
+                        <span id="budget-display">€80</span>
+                    </div>
+
+                    <button id="generate-plan" class="plan-btn">Generate Trip Plan</button>
+                    <button id="reset-plan" class="plan-btn secondary">Reset</button>
+                    <p id="plan-warning"></p>
+                </div>
+
+                <div class="planner-results" id="planner-results">
+                    <div class="results-placeholder">
+                        <h3>Your personalized trip plan will appear here!</h3>
+                        <p>Fill out the form and click "Generate Trip Plan" to get started.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="fun-fact-generator">
+            <h2>Fun Fact Generator</h2>
+            <div class="fun-fact-container">
+                <button id="generate-fun-fact" class="fun-fact-btn">Generate Fun Fact</button>
+                <div id="fun-fact-display" class="fun-fact-display">
+                    <p id="fun-fact-text">Click the button to discover a fun fact about Tallinn!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script defer src="js/navbar.js"></script>
+    <script defer src="js/footer.js"></script>
+    <script defer src="js/heroVideo.js"></script>
+    <script defer src="js/weather.js"></script>
+    <script defer src="js/time.js"></script>
+    <script defer src="js/tripPlanner.js"></script>
+    <script defer src="js/funFacts.js"></script>
+</body>
+
+</html>
